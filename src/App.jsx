@@ -14,6 +14,7 @@ function App() {
 //Conditional Rendering 
 function MainContent() {
   const { login,logOut } = useContext(UserContext);
-  return login && (logOut) ? <Profile /> : <AuthForm />;
+  console.log(logOut);
+  return login && !logOut ? <Profile /> : <AuthForm />;
 }
 export default App;
